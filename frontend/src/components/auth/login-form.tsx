@@ -17,11 +17,14 @@ import { useState } from "react"
 import { FormSuccessMessage } from "./form-success-message"
 import { FormErrorMessage } from "./form-error-message"
 import { loginToAccount } from "@/services/auth-services"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { useAuthStore } from "@/store/store"
 
 
 const LoginForm = () =>
 {
+    const authStore = useAuthStore()
+    const navigate = useNavigate()
     const [errorMessage, setErrorMessage] = useState('')
     const [successMessage, setSuccessMessage] = useState('')
     const [isLoading, setIsLoading] = useState(false)
@@ -41,6 +44,10 @@ const LoginForm = () =>
             {
                 form.reset()
                 setSuccessMessage(data.message)
+                console.log(data)
+                authStore.actions.setUserData(data.user)
+                authStore.actions.setAccessToken(data.token)
+                navigate('/')
                 setErrorMessage('')
             } else
             {
@@ -56,7 +63,7 @@ const LoginForm = () =>
     }
 
     return (
-        <Form {...form}>
+        < Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 <FormField
                     control={form.control}
@@ -91,7 +98,7 @@ const LoginForm = () =>
                 <FormErrorMessage message={errorMessage} />
                 <Button disabled={isLoading} variant={"outline"} className=" w-full" type="submit">Submit</Button>
             </form>
-        </Form>
+        </Form >
     )
 }
 

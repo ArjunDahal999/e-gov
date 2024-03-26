@@ -4,6 +4,7 @@ import ForgotPassowordPage from "@/pages/auth/forgot-password";
 import LoginPage from "@/pages/auth/login";
 import RegisterPage from "@/pages/auth/register";
 import ResetPasswordPage from "@/pages/auth/reset-password";
+import HomePage from "@/pages/home/home-page";
 import
 {
   createBrowserRouter,
@@ -32,6 +33,6 @@ export const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: "welcome",
+    element: <HomePage />,
   },
 ]);

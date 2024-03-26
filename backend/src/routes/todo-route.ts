@@ -73,6 +73,12 @@ router.delete('/delete-todo', deleteTodoItem);
  *       - Todo
  *     summary: Get all todo items.
  *     description: Retrieve all todo items for the authenticated user.
+ *     parameters:
+ *       - in: query
+ *         name: pageno
+ *         schema:
+ *           type: integer
+ *         description: The page number for pagination.
  *     responses:
  *       200:
  *         description: Successful operation.

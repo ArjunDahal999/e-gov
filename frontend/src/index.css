@@ -35,34 +35,36 @@
     --radius: 0.5rem;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+  .dark {   --gradient: linear-gradient(to top left,#00c6ff,#0072ff);
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --background: 206 65% 4%;
+    --foreground: 206 10% 97.5%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --muted: 206 50% 15%;
+    --muted-foreground: 206 10% 55%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --popover: 206 45% 6.5%;
+    --popover-foreground: 206 10% 97.5%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --card: 206 45% 6.5%;
+    --card-foreground: 206 10% 97.5%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --border: 206 50% 15%;
+    --input: 206 50% 15%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --primary: 206 100% 50%;
+    --primary-foreground: 206 10% 5%;
+
+    --secondary: 206 50% 15%;
+    --secondary-foreground: 206 10% 97.5%;
+
+    --accent: 206 50% 15%;
+    --accent-foreground: 206 10% 97.5%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 206 10% 97.5%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 206 100% 50%;
   }
 }
 
@@ -73,4 +75,18 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.todoContainer::-webkit-scrollbar {
+  width: 4px;
+}
+ 
+.todoContainer::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.todoContainer::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 20px;
 }

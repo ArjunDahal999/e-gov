@@ -21,7 +21,7 @@ interface FormWrapperPropsType
 const FormWrapper = ({ children, headerLable, backButtonHref, backButtonLabel }: FormWrapperPropsType) =>
 {
     return (
-        <Card className=" w-[400px] max-sm:m-2">
+        <Card className=" w-[400px] max-sm:m-2  border-cyan-300">
             <CardHeader>
                 <CardTitle className=" text-center">{headerLable}</CardTitle>
             </CardHeader>
