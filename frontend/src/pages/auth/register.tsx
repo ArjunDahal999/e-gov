@@ -10,7 +10,7 @@ const RegisterPage = () =>
         <AuthLayout>
             <FormWrapper
                 backButtonHref='/login'
-                backButtonLabel='Go Back To Register'
+                backButtonLabel='Go Back To Login'
                 headerLable='Register'
             >
                 <RegisterForm />
