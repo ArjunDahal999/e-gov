@@ -10,6 +10,7 @@ import
 } from "@/pages/auth";
 
 import HomePage from "@/pages/home/home-page";
+import Register from "@/pages/registeration/register";
 import { createBrowserRouter } from "react-router-dom"
 
 export const router = createBrowserRouter([
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
       {
         path: "/login",
         element: <LoginPage />,
+      },
+      {
+        path: "/license-register",
+        element: <Register />,
       },
       {
         path: "/register",

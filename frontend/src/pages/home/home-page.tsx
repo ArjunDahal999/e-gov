@@ -1,5 +1,7 @@
 
 import CarouselC from "@/components/home/carousel"
+import Content from "@/components/home/content"
+
 
 const HomePage = () =>
 {
@@ -11,7 +13,7 @@ const HomePage = () =>
                     <CarouselC />
                 </div>
                 <section className=" mt-4">
-                    <h1 className=" text-center text-4xl font-bold">News And Event</h1>
+                    <Content />
                 </section>
             </main>
         </>

@@ -13,6 +13,10 @@ const navLinks = [
     {
         name: "Login",
         link: "/login"
+    },
+    {
+        name: "Online  license",
+        link: "license-register"
     }
 ]
 
